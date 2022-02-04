@@ -6,7 +6,6 @@ def retorna_cep(cep):
     print(response.text) # imprime todo o texto da pagina, nesse caso o JSON
     dados_cep = response.json()
     return dados_cep['logradouro']
-    #print(dados_cep['logradouro'])
 
 def retorna_site(url):
     response = requests.get(url)
@@ -14,5 +13,5 @@ def retorna_site(url):
 
 if __name__ == '__main__':
     response = retorna_site('https://www.google.com.br/')
-    print(response)
-    #print(retorna_cep('01001000'))
+    # print(response)
+    print(retorna_cep('01001000'))
